@@ -105,6 +105,7 @@ function resetScore(){
   score.innerHTML = 
   `<p>Player: 0</p>
   <p>Computer: 0</p>`;
+  restart.style.display = 'none';
 }
 
 //Event Listeners
