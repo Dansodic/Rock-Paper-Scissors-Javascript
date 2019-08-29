@@ -6,6 +6,8 @@
   --light-color: #cecece;
   --lose-color: #dc3545;
   --win-color: #28a745;
+  --playerscore-color: #149410;
+  --computerscore-color: #86080e;
 }
 
 *{
@@ -13,10 +15,15 @@
   padding: 0%;
   margin: 0%;
 }
+.title{
+  background-color: #333333;
+  color: #cecece;
+}
+
 body{
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background: #f4f4f4;
+  background: #4444445b;
   color: #333333;
 }
 
@@ -63,11 +70,11 @@ body{
 }
 
 .score p:first-child{
-  background: var(--primary-color)
+  background: var(--playerscore-color)
 }
 
 .score p:last-child{
-  background: var(--dark-color)
+  background: var(--computerscore-color)
 }
 
 .choices{

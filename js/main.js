@@ -11,6 +11,28 @@ const scoreboard = {
   computer:0
 }
 
+//firstToTen
+function firstToTen(){
+  player10 = scoreboard.player;
+  pc10 = scoreboard.computer;
+  console.log(player10,pc10);
+  if(player10 == 10){
+    //show result
+    result.innerHTML = `<h1 class = "text-win">You Got to Ten First!</h1>
+    <p>The Computer scored <strong>${pc10}</strong></p>`;
+    modal.style.display ='block';
+    resetScore();
+  }else if(pc10 === 10){
+    result.innerHTML = `<h1 class = "text-win">The Computer Got to Ten First!</h1>
+    <p>You scored <strong>${player10}</strong></p>`;
+    modal.style.display ='block';
+    resetScore();
+  }
+
+  
+
+}
+
 //Play Function
 function play(e){
   restart.style.display = 'inline-block';
@@ -18,6 +40,7 @@ function play(e){
   const computerChoice = getComputerChoice();
   const winner = getWinner(playerChoice, computerChoice );
   displayWinner(winner,computerChoice);
+  firstToTen();
 }
 
 // Get Computer Choice
